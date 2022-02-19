@@ -42,8 +42,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
                               return Card(
                                   child: ListTile(
-                                title: Text(title),
-                                subtitle: Text(body),
+                                title: Text(
+                                  title,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                subtitle: Text(
+                                  body,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
                               ));
                             }));
                   }
@@ -56,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
           onPressed: () {
             Navigator.pushNamed(context, "/addNote");
           },
-          child: Icon(Icons.note_add)),
+          child: const Icon(Icons.note_add)),
     );
   }
 }

@@ -15,8 +15,8 @@ class NotesApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: "/",
       routes: {
-        "/": (context) => HomeScreen(),
-        "/addNote": (context) => AddNoteScreen()
+        "/": (context) => const HomeScreen(),
+        "/addNote": (context) => const AddNoteScreen()
       },
       debugShowCheckedModeBanner: false,
     );
